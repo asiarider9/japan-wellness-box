@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan Wellness Box — Shinrin-yoku Forest Bathing Experience</title>
+<meta name="description" content="Guided Shinrin-yoku forest bathing in Japan's sacred forests. Science-backed wellness immersion led by a bilingual Japanese facilitator. Book your transformative experience.">
+<meta property="og:title" content="Japan Wellness Box — Shinrin-yoku Forest Bathing">
+<meta property="og:description" content="Guided forest bathing and Japanese wellness experiences. Science-backed, culturally authentic.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1a18;
+  --stone: #5c5a52;
+  --mist: #f5f3ee;
+  --moss: #4a5e3c;
+  --moss-light: #6b8055;
+  --cedar: #8b7355;
+  --water: #7a9e9e;
+  --cream: #faf8f3;
+  --gold: #c4a96a;
+  --dark: #1e2a18;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:300;color:var(--ink);background:var(--cream);line-height:1.8;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.section-label{font-size:.7rem;letter-spacing:.4em;text-transform:uppercase;color:var(--moss);margin-bottom:1.5rem;font-weight:500}
+.serif{font-family:'Cormorant Garamond',serif}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,248,243,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.04);transition:all .4s}
+nav.scrolled{padding:.85rem 3rem;box-shadow:0 2px 20px rgba(0,0,0,0.04)}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;letter-spacing:.12em;color:var(--moss);text-transform:uppercase;text-decoration:none;line-height:1.3}
+.nav-brand span{font-weight:300;color:var(--stone);font-size:.72rem;display:block;letter-spacing:.25em}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--stone);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:400;transition:color .3s}
+.nav-links a:hover{color:var(--moss)}
+.nav-cta{padding:.55rem 1.5rem;border:1px solid var(--moss);color:var(--moss);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:all .3s}
+.nav-cta:hover{background:var(--moss);color:#fff}
+.mobile-menu{display:none;background:none;border:none;cursor:pointer;padding:.5rem}
+.mobile-menu span{display:block;width:22px;height:1.5px;background:var(--ink);margin:5px 0;transition:.3s}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:linear-gradient(165deg,#2d3a25 0%,#1e2a18 40%,#0f1a0a 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(74,94,60,0.3) 0%,transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(122,158,158,0.15) 0%,transparent 50%)}
+.hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none}
+.hero-content{text-align:center;position:relative;z-index:2;padding:2rem;animation:fadeUp 1.2s ease-out}
+.hero-jp{font-family:'Cormorant Garamond',serif;font-size:clamp(.9rem,1.5vw,1.1rem);color:var(--gold);letter-spacing:.5em;margin-bottom:2rem;font-weight:300}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5.5vw,5rem);font-weight:300;color:var(--mist);line-height:1.15;letter-spacing:.02em;margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:clamp(.8rem,1.1vw,.95rem);color:rgba(245,243,238,0.6);letter-spacing:.2em;text-transform:uppercase;font-weight:300;margin-bottom:3rem}
+.hero-cta{display:inline-block;padding:1rem 2.5rem;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;font-weight:500;transition:all .4s}
+.hero-cta:hover{background:var(--gold);color:var(--ink)}
+.hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);color:rgba(245,243,238,0.25);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;animation:pulse 2s ease-in-out infinite;display:flex;flex-direction:column;align-items:center;gap:.4rem}
+.hero-scroll::after{content:'';width:1px;height:35px;background:linear-gradient(to bottom,rgba(245,243,238,0.25),transparent)}
+
+/* PAIN POINTS */
+.pain{padding:6rem 2rem;background:var(--mist)}
+.pain-inner{max-width:900px;margin:0 auto;text-align:center}
+.pain h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:300;margin-bottom:3rem;line-height:1.4;color:var(--ink)}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:3rem}
+.pain-item{padding:2rem 1.5rem;background:var(--cream);border:1px solid rgba(0,0,0,0.04)}
+.pain-icon{font-size:2rem;margin-bottom:1rem}
+.pain-item h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;margin-bottom:.5rem}
+.pain-item p{font-size:.85rem;color:var(--stone)}
+.pain-answer{font-size:1rem;color:var(--stone);max-width:650px;margin:0 auto;font-style:italic}
+
+/* WHAT IS */
+.what-is{padding:7rem 2rem;max-width:800px;margin:0 auto;text-align:center}
+.what-is h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.5rem);font-weight:300;margin-bottom:2rem;line-height:1.4}
+.what-is p{font-size:.95rem;color:var(--stone);margin-bottom:1.5rem;max-width:650px;margin-left:auto;margin-right:auto}
+.origin-badge{display:inline-block;padding:.5rem 1.5rem;border:1px solid var(--moss);color:var(--moss);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;margin-top:1rem}
+
+/* SCIENCE */
+.science{padding:6rem 2rem;background:var(--dark);color:var(--mist)}
+.science-inner{max-width:1000px;margin:0 auto}
+.science-header{text-align:center;margin-bottom:4rem}
+.science-header .section-label{color:var(--gold)}
+.science-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:300;color:var(--mist)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-bottom:3rem}
+.stat{text-align:center;padding:1.5rem}
+.stat-number{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4vw,3.5rem);font-weight:300;color:var(--gold);line-height:1}
+.stat-unit{font-size:.9rem;color:var(--gold);font-weight:300}
+.stat-desc{font-size:.8rem;color:rgba(245,243,238,0.5);margin-top:.5rem;line-height:1.5}
+.science-source{text-align:center;font-size:.7rem;color:rgba(245,243,238,0.3);letter-spacing:.1em;margin-top:1rem}
+
+/* EXPERIENCE */
+.experience{padding:7rem 2rem;background:var(--cream)}
+.experience-inner{max-width:1100px;margin:0 auto}
+.experience-header{text-align:center;margin-bottom:4rem}
+.experience-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:300}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
+.exp-card{padding:2.5rem;background:var(--mist);border:1px solid rgba(0,0,0,0.04);transition:transform .4s,box-shadow .4s}
+.exp-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.06)}
+.exp-number{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--moss-light);opacity:.4;line-height:1;margin-bottom:.8rem}
+.exp-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;margin-bottom:.8rem}
+.exp-card p{font-size:.88rem;color:var(--stone);line-height:1.7}
+
+/* TIMELINE */
+.timeline{padding:7rem 2rem;background:var(--mist)}
+.timeline-inner{max-width:750px;margin:0 auto}
+.timeline-header{text-align:center;margin-bottom:4rem}
+.timeline-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:300}
+.tl-item{display:grid;grid-template-columns:80px 2px 1fr;gap:1.5rem;margin-bottom:2.5rem;align-items:start}
+.tl-time{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;text-align:right;color:var(--moss);padding-top:.2rem}
+.tl-line{background:linear-gradient(to bottom,var(--moss),rgba(74,94,60,0.2));border-radius:1px;position:relative}
+.tl-line::before{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:8px;height:8px;background:var(--moss);border-radius:50%}
+.tl-content h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;margin-bottom:.3rem}
+.tl-content p{font-size:.85rem;color:var(--stone)}
+
+/* PROGRAM DETAILS */
+.program{padding:7rem 2rem}
+.program-inner{max-width:900px;margin:0 auto}
+.program-header{text-align:center;margin-bottom:3.5rem}
+.program-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:300}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:3rem}
+.detail-item{padding:1.8rem;border-left:2px solid var(--moss)}
+.detail-item .label{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--moss);margin-bottom:.3rem;font-weight:500}
+.detail-item .value{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400}
+.detail-item .note{font-size:.82rem;color:var(--stone);margin-top:.2rem}
+.includes{padding:2.5rem;background:var(--mist);margin-bottom:2rem}
+.includes h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;margin-bottom:1.2rem}
+.includes ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.includes li{font-size:.88rem;color:var(--stone);padding-left:1.5rem;position:relative}
+.includes li::before{content:'—';position:absolute;left:0;color:var(--moss)}
+.price-box{text-align:center;padding:3rem;border:1px solid var(--moss);margin-top:2rem}
+.price-box .from{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--stone)}
+.price-box .price{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:var(--moss);margin:.3rem 0}
+.price-box .per{font-size:.85rem;color:var(--stone)}
+.price-box .price-note{font-size:.75rem;color:var(--stone);margin-top:.8rem;opacity:.7}
+
+/* MID CTA */
+.mid-cta{padding:5rem 2rem;text-align:center;background:var(--moss);color:#fff}
+.mid-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:300;margin-bottom:1.5rem}
+.mid-cta .cta-btn{display:inline-block;padding:.9rem 2.5rem;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;transition:all .4s}
+.mid-cta .cta-btn:hover{background:var(--gold);color:var(--ink)}
+
+/* FACILITATOR */
+.facilitator{padding:7rem 2rem;background:var(--cream)}
+.facilitator-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:center}
+.facilitator-image{aspect-ratio:3/4;background:linear-gradient(135deg,var(--moss) 0%,#3a4e30 100%);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.25);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase}
+.facilitator-text h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;margin-bottom:.4rem}
+.facilitator-text .role{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--moss);margin-bottom:1.5rem;font-weight:500}
+.facilitator-text p{font-size:.92rem;color:var(--stone);margin-bottom:1rem;line-height:1.8}
+.credentials{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.credential{padding:.35rem 1rem;border:1px solid rgba(0,0,0,0.1);font-size:.7rem;letter-spacing:.1em;color:var(--stone)}
+
+/* TESTIMONIALS */
+.testimonials{padding:7rem 2rem;background:var(--mist)}
+.testimonials-inner{max-width:900px;margin:0 auto}
+.testimonials-header{text-align:center;margin-bottom:4rem}
+.testimonials-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:300}
+.testimonial-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.testimonial{padding:2.5rem;background:var(--cream);border:1px solid rgba(0,0,0,0.04)}
+.testimonial blockquote{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;font-weight:400;line-height:1.7;margin-bottom:1.5rem;color:var(--ink)}
+.testimonial cite{font-style:normal;font-size:.8rem;color:var(--stone);letter-spacing:.1em}
+
+/* SEASONAL */
+.seasonal{padding:7rem 2rem;background:var(--cream)}
+.seasonal-inner{max-width:1000px;margin:0 auto}
+.seasonal-header{text-align:center;margin-bottom:3.5rem}
+.seasonal-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:300}
+.season-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.season-card{padding:2rem 1.5rem;text-align:center;border:1px solid rgba(0,0,0,0.06);transition:all .3s}
+.season-card:hover{border-color:var(--moss);transform:translateY(-2px)}
+.season-kanji{font-size:2rem;margin-bottom:.5rem;color:var(--moss)}
+.season-card h3{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;margin-bottom:.3rem}
+.season-card .months{font-size:.7rem;letter-spacing:.2em;color:var(--stone);text-transform:uppercase;margin-bottom:.8rem}
+.season-card p{font-size:.82rem;color:var(--stone);line-height:1.6}
+
+/* FAQ */
+.faq{padding:7rem 2rem}
+.faq-inner{max-width:750px;margin:0 auto}
+.faq-header{text-align:center;margin-bottom:3.5rem}
+.faq-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:300}
+.faq-item{border-bottom:1px solid rgba(0,0,0,0.06);padding:1.5rem 0}
+.faq-q{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--moss);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;font-size:.88rem;color:var(--stone);line-height:1.8}
+.faq-item.open .faq-a{max-height:300px;padding-top:1rem}
+
+/* FINAL CTA */
+.final-cta{padding:7rem 2rem;text-align:center;background:linear-gradient(165deg,#2d3a25 0%,#1e2a18 100%);color:var(--mist)}
+.final-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;margin-bottom:1rem}
+.final-cta p{font-size:.9rem;color:rgba(245,243,238,0.55);max-width:480px;margin:0 auto 2.5rem}
+.final-cta .cta-btn{display:inline-block;padding:1rem 3rem;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;font-weight:500;transition:all .4s}
+.final-cta .cta-btn:hover{background:var(--gold);color:var(--ink)}
+.final-cta .sub-links{margin-top:2rem;display:flex;justify-content:center;gap:2.5rem}
+.final-cta .sub-links a{color:rgba(245,243,238,0.4);text-decoration:none;font-size:.72rem;letter-spacing:.15em;transition:color .3s}
+.final-cta .sub-links a:hover{color:var(--gold)}
+
+/* FOOTER */
+footer{padding:3.5rem 2rem;text-align:center;border-top:1px solid rgba(0,0,0,0.06)}
+footer p{font-size:.72rem;color:var(--stone);letter-spacing:.12em}
+footer .social{margin-top:1.2rem;display:flex;justify-content:center;gap:2rem}
+footer .social a{color:var(--stone);text-decoration:none;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;transition:color .3s}
+footer .social a:hover{color:var(--moss)}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:.25}50%{opacity:.5}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .mobile-menu{display:block}
+  .pain-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .exp-grid{grid-template-columns:1fr}
+  .detail-grid{grid-template-columns:1fr}
+  .facilitator-inner{grid-template-columns:1fr}
+  .facilitator-image{aspect-ratio:16/9}
+  .testimonial-grid{grid-template-columns:1fr}
+  .season-grid{grid-template-columns:repeat(2,1fr)}
+  .includes ul{grid-template-columns:1fr}
+  .tl-item{grid-template-columns:60px 2px 1fr;gap:1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-brand">Japan Wellness Box<span>Shinrin-yoku Experience</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#science">Science</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#program">Details</a></li>
+    <li><a href="#facilitator">Guide</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="mobile-menu" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-jp">森 林 浴</p>
+    <h1><em>Shinrin-yoku</em><br>Forest Bathing<br>Experience</h1>
+    <p class="hero-sub">Guided Wellness Immersion in Japan's Sacred Forests</p>
+    <a href="#contact" class="hero-cta">Book Your Experience</a>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="pain reveal">
+  <div class="pain-inner">
+    <p class="section-label">Does This Sound Familiar?</p>
+    <h2>The modern world takes more<br>than it gives back</h2>
+    <div class="pain-grid">
+      <div class="pain-item">
+        <div class="pain-icon">&#x1f6ab;</div>
+        <h3>Constant Overwhelm</h3>
+        <p>Your mind never fully rests. Even on vacation, you carry the weight of notifications, decisions, and deadlines.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">&#x1f4a4;</div>
+        <h3>Broken Sleep</h3>
+        <p>You're tired but can't sleep deeply. You wake up already exhausted, wondering where your energy went.</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">&#x1f9e0;</div>
+        <h3>Disconnection</h3>
+        <p>You've forgotten what it feels like to be fully present. Nature feels distant, and stillness feels uncomfortable.</p>
+      </div>
+    </div>
+    <p class="pain-answer">Shinrin-yoku was created in Japan for exactly this. Not as escape, but as return — to your senses, your calm, and your natural state of well-being.</p>
+  </div>
+</section>
+
+<!-- WHAT IS SHINRIN-YOKU -->
+<section class="what-is reveal" id="about">
+  <p class="section-label">What Is Shinrin-yoku</p>
+  <h2>The Japanese art of<br>bathing in the forest atmosphere</h2>
+  <p>Shinrin-yoku is not a hike. Not exercise. Not a nature walk. Coined in Japan in 1982, it is a slow, intentional immersion into the forest — opening all five senses to the healing compounds released by trees, the rhythm of water, the texture of moss, and the silence between sounds.</p>
+  <p>What began as a public health initiative by Japan's Ministry of Agriculture has become a globally recognized form of preventive medicine, now prescribed by doctors in Japan and South Korea.</p>
+  <div class="origin-badge">Originated in Japan, 1982</div>
+</section>
+
+<!-- SCIENCE -->
+<section class="science reveal" id="science">
+  <div class="science-inner">
+    <div class="science-header">
+      <p class="section-label" style="color:var(--gold)">Backed By Science</p>
+      <h2>Measurable effects on body and mind</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-number">12–16<span class="stat-unit">%</span></div>
+        <div class="stat-desc">reduction in cortisol<br>(stress hormone)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">50<span class="stat-unit">%+</span></div>
+        <div class="stat-desc">increase in NK cell activity<br>(immune function)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">5–7<span class="stat-unit">bpm</span></div>
+        <div class="stat-desc">average pulse rate<br>reduction</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">30<span class="stat-unit">days</span></div>
+        <div class="stat-desc">immune boost duration<br>after a single session</div>
+      </div>
+    </div>
+    <p class="science-source">Source: Chiba University Center for Environment, Health and Field Sciences; Environmental Health and Preventive Medicine journal; Dr. Qing Li, Nippon Medical School</p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience reveal" id="experience">
+  <div class="experience-inner">
+    <div class="experience-header">
+      <p class="section-label">The Experience</p>
+      <h2>Three pillars of Japanese forest wellness</h2>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <div class="exp-number">01</div>
+        <h3>Sensory Awakening</h3>
+        <p>Guided breathing and mindful walking rooted in Zen tradition. We slowly open each sense to the forest — the scent of hinoki cedar, the texture of moss, the sound of water over ancient stone.</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-number">02</div>
+        <h3>Forest Meditation</h3>
+        <p>Seated meditation in a carefully chosen clearing. Drawing from Zen and Shinto traditions of nature reverence, this practice connects you to the Japanese concept of harmony between human and forest.</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-number">03</div>
+        <h3>Tea Ceremony in Nature</h3>
+        <p>A simple tea ritual using locally sourced matcha or seasonal herbal tea. This moment of shared stillness — ichigo ichie, "one time, one meeting" — becomes the anchor of your experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline reveal">
+  <div class="timeline-inner">
+    <div class="timeline-header">
+      <p class="section-label">A Day With Us</p>
+      <h2>How the experience unfolds</h2>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">9:00</div>
+      <div class="tl-line"></div>
+      <div class="tl-content"><h3>Arrival & Welcome</h3><p>Meet at the forest entrance. Brief orientation, intention setting, and digital device storage.</p></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">9:30</div>
+      <div class="tl-line"></div>
+      <div class="tl-content"><h3>Breathing & Grounding</h3><p>Guided breathing exercises rooted in Zen tradition. Your body begins to shift from "doing" to "being."</p></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">10:00</div>
+      <div class="tl-line"></div>
+      <div class="tl-content"><h3>Sensory Forest Walk</h3><p>Slow, mindful walking through the forest. Each sense is engaged one by one — sight, sound, scent, touch, taste.</p></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">11:00</div>
+      <div class="tl-line"></div>
+      <div class="tl-content"><h3>Forest Meditation</h3><p>Seated meditation in a natural clearing. Guided visualization connecting you to the forest's energy.</p></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">11:30</div>
+      <div class="tl-line"></div>
+      <div class="tl-content"><h3>Tea Ceremony & Reflection</h3><p>Matcha or herbal tea prepared outdoors. Share reflections with the group or sit in contemplative silence.</p></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-time">12:30</div>
+      <div class="tl-line"></div>
+      <div class="tl-content"><h3>Closing & Integration</h3><p>Wellness reflection guide and take-home practices to continue the benefits in daily life.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM DETAILS -->
+<section class="program" id="program">
+  <div class="program-inner">
+    <div class="program-header reveal">
+      <p class="section-label">Program Details</p>
+      <h2>Crafted for mindful travelers</h2>
+    </div>
+    <div class="detail-grid reveal">
+      <div class="detail-item">
+        <div class="label">Duration</div>
+        <div class="value">3.5 hours</div>
+        <div class="note">Morning session (9:00–12:30)</div>
+      </div>
+      <div class="detail-item">
+        <div class="label">Group Size</div>
+        <div class="value">2 — 6 guests</div>
+        <div class="note">Intimate, personalized guidance</div>
+      </div>
+      <div class="detail-item">
+        <div class="label">Language</div>
+        <div class="value">English & Japanese</div>
+        <div class="note">Mandarin Chinese available on request</div>
+      </div>
+      <div class="detail-item">
+        <div class="label">Location</div>
+        <div class="value">Greater Tokyo Area</div>
+        <div class="note">60–90 min from central Tokyo by train</div>
+      </div>
+    </div>
+    <div class="includes reveal">
+      <h3>What's Included</h3>
+      <ul>
+        <li>Guided Shinrin-yoku forest immersion (3+ hours)</li>
+        <li>Zen-inspired breathing & meditation</li>
+        <li>Outdoor matcha tea ceremony</li>
+        <li>Seasonal Japanese wellness snack</li>
+        <li>Post-experience wellness reflection guide</li>
+        <li>Digital photos from your experience</li>
+      </ul>
+    </div>
+    <div class="price-box reveal">
+      <div class="from">Starting from</div>
+      <div class="price">¥15,000</div>
+      <div class="per">per person</div>
+      <div class="price-note">Private group pricing available on request. Children under 12 are welcome at half price.</div>
+    </div>
+  </div>
+</section>
+
+<!-- MID CTA -->
+<section class="mid-cta reveal">
+  <h2>Ready to step into the forest?</h2>
+  <a href="#contact" class="cta-btn">Check Availability</a>
+</section>
+
+<!-- FACILITATOR -->
+<section class="facilitator reveal" id="facilitator">
+  <div class="facilitator-inner">
+    <div class="facilitator-image">Your photo here</div>
+    <div class="facilitator-text">
+      <p class="section-label">Your Guide</p>
+      <h2>Nobu Fujii</h2>
+      <p class="role">Wellness Facilitator & Program Director</p>
+      <p>Born and raised in Japan, Nobu bridges the depth of Japanese wellness philosophy with global perspective. With an MBA from Singapore, a career as CFO across international ventures, and a deep personal practice rooted in Japanese spirituality, he guides guests beyond the surface of wellness tourism into authentic renewal.</p>
+      <p>His mission: to share the depth of Japanese wellness culture — not as a tourist attraction, but as a genuine path to well-being that has sustained the Japanese way of life for centuries.</p>
+      <div class="credentials">
+        <span class="credential">MBA (Singapore)</span>
+        <span class="credential">Bilingual JP/EN</span>
+        <span class="credential">HSK6 Mandarin</span>
+        <span class="credential">10+ Years Global Business</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials reveal">
+  <div class="testimonials-inner">
+    <div class="testimonials-header">
+      <p class="section-label">Guest Voices</p>
+      <h2>Stories from the forest</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <blockquote>"I came expecting a nature walk. What I experienced was something I can only describe as a full reset. The silence, the breathing, the tea — every moment felt intentional. I slept better that night than I had in months."</blockquote>
+        <cite>— Coming soon from our first guests</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>"Nobu's guidance was unlike any wellness experience I've had. He doesn't just translate Japanese culture — he embodies it. The difference between this and a 'forest bathing tour' is the difference between karaoke and a live concert."</blockquote>
+        <cite>— Coming soon from our first guests</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEASONAL -->
+<section class="seasonal reveal">
+  <div class="seasonal-inner">
+    <div class="seasonal-header">
+      <p class="section-label">Four Seasons</p>
+      <h2>Every season tells a different story</h2>
+    </div>
+    <div class="season-grid">
+      <div class="season-card">
+        <div class="season-kanji">桜</div>
+        <h3>Spring</h3>
+        <div class="months">March — May</div>
+        <p>Cherry blossoms, fresh green leaves, and the energy of renewal. Forest phytoncides are at their peak.</p>
+      </div>
+      <div class="season-card">
+        <div class="season-kanji">翠</div>
+        <h3>Summer</h3>
+        <div class="months">June — August</div>
+        <p>Deep green canopies create natural cooling. The sound of cicadas and flowing streams becomes your meditation.</p>
+      </div>
+      <div class="season-card">
+        <div class="season-kanji">紅</div>
+        <h3>Autumn</h3>
+        <div class="months">September — November</div>
+        <p>Crimson and gold foliage. The forest teaches letting go. Crisp air sharpens every sense.</p>
+      </div>
+      <div class="season-card">
+        <div class="season-kanji">静</div>
+        <h3>Winter</h3>
+        <div class="months">December — February</div>
+        <p>Bare branches reveal the forest's architecture. Silence deepens. The most contemplative season.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="faq-header reveal">
+      <p class="section-label">FAQ</p>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do I need any fitness level or experience?</div>
+      <div class="faq-a">No. Shinrin-yoku is designed to be accessible to everyone. We walk very slowly — this is not a hike. If you can walk gently for 30 minutes, you can fully participate.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What should I wear and bring?</div>
+      <div class="faq-a">Comfortable walking shoes and layered clothing suitable for the season. We provide everything else including tea, snacks, and meditation cushions. We recommend leaving phones in the car or on silent.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is this suitable for children?</div>
+      <div class="faq-a">Yes. Children aged 6 and above are welcome. We adapt the experience to include gentle, playful nature engagement for younger participants. Children under 12 are half price.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What happens if it rains?</div>
+      <div class="faq-a">Light rain enhances the forest bathing experience — the scent of petrichor and the sound of raindrops on leaves deepen the sensory immersion. We proceed in light rain with provided umbrellas. In heavy rain or storms, we reschedule at no charge.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I get to the location?</div>
+      <div class="faq-a">Our forest locations are 60–90 minutes from central Tokyo by train. Detailed access instructions with train routes and meeting point photos are sent after booking. We can also arrange private car transfers for groups.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I book a private experience?</div>
+      <div class="faq-a">Absolutely. Private sessions for couples, families, or small groups can be arranged. Corporate wellness programs are also available. Contact us for custom pricing.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="contact">
+  <h2 class="reveal">Begin your journey<br>into stillness</h2>
+  <p class="reveal">Limited availability. Each experience is personally guided by Nobu to ensure depth and authenticity.</p>
+  <a href="mailto:hello@japanwellnessbox.com" class="cta-btn reveal">Inquire About Availability</a>
+  <div class="sub-links reveal">
+    <a href="https://www.youtube.com/@nobu.222" target="_blank">YouTube</a>
+    <a href="#" target="_blank">Instagram</a>
+    <a href="https://www.getyourguide.com/" target="_blank">GetYourGuide</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 Japan Wellness Box &middot; Shinrin-yoku Forest Bathing Experience by Nobu Fujii</p>
+  <div class="social">
+    <a href="https://www.youtube.com/@nobu.222" target="_blank">YouTube</a>
+    <a href="#" target="_blank">Instagram</a>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)});
+
+// Reveal on scroll
+const reveals=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach((entry,i)=>{
+    if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*80);observer.unobserve(entry.target)}
+  })
+},{threshold:0.12});
+reveals.forEach(el=>observer.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('open')});
+    item.classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>
